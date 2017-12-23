@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Aula2"
+             x:Class="Aula2.MainPage"
+             Title="#CLASS"
+             Padding="10,20,10,50"
+             BackgroundColor="LightSlateGray">
+
+    <StackLayout
+            Margin="10,10,10,50"
+            VerticalOptions="Start">
+        <StackLayout
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center">
+            <Image
+                    WidthRequest="100"
+                    HeightRequest="100"
+                    Source="logo_escola.png" />
+
+        </StackLayout>        
+        <StackLayout>
+            <Label 
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="Start"
+                    Text="Login:"
+                    Font="20dp"/>
+            <Entry 
+                    VerticalOptions="Start"
+                    HorizontalOptions="FillAndExpand"
+                    Placeholder="Digite seu login"
+                    x:Name="EntryLogin"
+                    BackgroundColor="#2c3e50"
+                    FontSize="Small"/>            
+            
+        </StackLayout>
+        <StackLayout>
+            <Label 
+                    VerticalOptions="Start"
+                    HorizontalOptions="FillAndExpand"
+                    Text="Senha:"
+                    Font="20dp"/>
+            <Entry
+                    VerticalOptions="Start"
+                    x:Name="EntrySenha"
+                    Placeholder="Digite sua senha"
+                    IsPassword="True"
+                    BackgroundColor="#2c3e50"
+                    FontSize="Small"/>
+
+        </StackLayout>
+        <StackLayout>       
+            <Button 
+                VerticalOptions="Start"
+                Text="Entrar"
+                Clicked="btnEntrar_Clicked"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

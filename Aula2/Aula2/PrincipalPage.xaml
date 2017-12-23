@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+    
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Aula2.PrincipalPage"
+             Title="Cadastro de Aluno"
+             Padding="10,10,10,50"             
+             BackgroundColor="LightSlateGray">   
+        <StackLayout
+                    Margin="10,10,10,50"
+                    VerticalOptions="StartAndExpand">
+            <StackLayout>        
+                <Label Text="Nome:"
+                   Font="20dp"
+                   VerticalOptions="Start"
+                   HorizontalOptions="FillAndExpand"/>
+                <Entry x:Name="EntryNome"
+                       VerticalOptions="Start"
+                       HorizontalOptions="FillAndExpand"                       
+                       FontSize="Small"
+                       BackgroundColor="#2c3e50"/>
+            </StackLayout>
+        <StackLayout>
+            <Label Text="Data Nascimento:"
+                   Font="20dp"
+                   VerticalOptions="Start"
+                   HorizontalOptions="FillAndExpand"/>
+            <DatePicker
+                       x:Name="dpDataNascimento"
+                       VerticalOptions="Start"
+                       HorizontalOptions="FillAndExpand"       
+                       MinimumDate="01/01/1970" 
+                       MaximumDate="01/01/2100"
+                       Format="dd/MM/yyyy"
+                       BackgroundColor="#2c3e50"/>
+        </StackLayout>       
+        <StackLayout>
+            <Label Text="Idade:"
+                   Font="20dp"
+                   VerticalOptions="Start"
+                   HorizontalOptions="FillAndExpand"/>
+            <Entry x:Name="EntryIdade"
+                       VerticalOptions="Start"
+                       HorizontalOptions="FillAndExpand" 
+                       Keyboard="Numeric"                      
+                       FontSize="Small"
+                       BackgroundColor="#2c3e50"/>
+        </StackLayout>
+        <StackLayout>
+            <Label Text="Sexo:"
+                   Font="20dp"
+                   VerticalOptions="Start"
+                   HorizontalOptions="FillAndExpand"/>
+            <Picker Title="Selecione..."
+                 VerticalOptions="Start"
+                 HorizontalOptions="FillAndExpand" 
+                 x:Name="picSexo"
+                 BackgroundColor="#2c3e50">
+                <Picker.Items>
+                    <x:String>Masculino</x:String>
+                    <x:String>Feminino</x:String>
+                </Picker.Items>
+            </Picker>
+        </StackLayout>
+        <StackLayout>
+            <Label Text="Fone:"
+                   Font="20dp"
+                   VerticalOptions="Start"
+                   HorizontalOptions="FillAndExpand"/>
+            <Entry x:Name="EntryFone"
+                       VerticalOptions="Start"
+                       HorizontalOptions="FillAndExpand" 
+                       Keyboard="Telephone"                      
+                       FontSize="Small"
+                       BackgroundColor="#2c3e50"/>
+        </StackLayout>
+        <StackLayout>
+            <Label Text="Email:"
+                   Font="20dp"
+                   VerticalOptions="Start"
+                   HorizontalOptions="FillAndExpand"/>
+            <Entry x:Name="EntryEmail"
+                       VerticalOptions="Start"
+                       HorizontalOptions="FillAndExpand" 
+                       Keyboard="Email"
+                       FontSize="Small"
+                       BackgroundColor="#2c3e50"/>
+            
+        </StackLayout>
+        
+        <Button 
+            Text="Salvar"
+            x:Name="btnSalvar"
+            VerticalOptions="Start"
+            Clicked="btnSalvar_Clicked"/>
+        
+    </StackLayout>    
+   
+</ContentPage>
